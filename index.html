@@ -1,48 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-
-<script type="text/javascript" charset="utf-8" src="plugins.ZoomControl.js"></script>
+<style> 
 
 
+#myDiv1 {   
+  width:100px;
+  height:100px;
+  background:red;
+  position:relative;
 
-
-<script type="text/javascript" charset="utf-8">
-
-
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    function onDeviceReady() {
-        alert('Zoom ready to use');
-    }
-  
+}
 
 
 
 
-</script>
+.myAni {   
+-webkit-animation-name: myFirst;
+-webkit-animation-duration:3s;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-timing-function: ease;
+-webkit-animation-fill-mode: forwards;
+}
+
+
+
+
+
+@-webkit-keyframes myFirst {     
+  0%   {background:red;   left:0px; top:0px;}
+  25%  {background:yellow; left:200px; top:0px; }
+  50%  {background:blue;  left:200px; top:200px; }
+  75%  {background:green;  left:0px; top:200px;}
+  100% {background:red;    left:0px; top:0px;  -webkit-transform: scale(2.1) rotate(50deg);  }
+
+
+
+}
+
+</style>
+
+
+
+
+
 </head>
-<body onpinch="{alert('pinch')}">
-<font style="font-size:30px">  
+<body>
 
-<h3>Using the zoom with Phonegap Build</h3>
+<p><b>Note:</b> This CSS animations example has been optimized for Phonegap and does not include the standard 
+
+format for non-chrome or safari browsers</p>
 
 
 
-   
+<input id="myGoButton" type=button value= go onclick="{
 
-<input type=button value="Picture As Data" style="font-size:30px" onclick="{
-
-   
-  
+   if (document.getElementById('myGoButton').value =='go') {
+       document.getElementById('myDiv1').className ='myAni';
+       setTimeout(function() {
+           document.getElementById('myDiv1').className ='myAniNot';
+           document.getElementById('myGoButton').value= 'go'
+           }, 3000);
+       document.getElementById('myGoButton').value= 'running'
+   }
 }">
 
-    
-       
-</font>
+
+
+
+
+<div id="myDiv1"  >
+
+
+
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+asjdfhjashdf<br>jhasdfgjahaskdf<hr>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><input type=button value="index.html" style="font-size:30px" onclick="location='index.html'"><br>
+
+
+
+<hr>
+
+
+  -webkit-animation:myfirst 3s linear 1s infinite alternate;
 </body>
 </html>
-
-
