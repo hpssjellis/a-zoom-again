@@ -31,7 +31,7 @@
   25% {     -webkit-transform: scale(1.0) ;  }
   50% {      -webkit-transform: scale(2.0) ;  }
   75% {   -webkit-transform: scale(3.0) ;  }
-  100% {     -webkit-transform: scale(3.0) ;  }
+  100% {     -webkit-transform: scale(4.0) ;  }
 
 
 
@@ -75,7 +75,7 @@ format for non-chrome or safari browsers</p>
 <br><input type=button value="go2" style="font-size:30px" onclick="{
 
     document.getElementById('myDiv1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
-    document.getElementById('myDiv1').style.webkitTransform = 'translate('+ ('+document.all.myScale.value+') +'px, '+ ('+document.all.myScale.value+')+'px)';
+    document.getElementById('myDiv1').style.webkitTransform = 'translate('+ (-'+document.all.myScale.value+') +'px, '+ ('+document.all.myScale.value+')+'px)';
 
 
 }"><br>
