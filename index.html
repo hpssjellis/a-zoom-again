@@ -28,6 +28,9 @@
 
 
 @-webkit-keyframes myFirst {     
+  25% {    left:0px; top:0px;  -webkit-transform: scale(1.0) ;  }
+  50% {    left:0px; top:0px;  -webkit-transform: scale(2.0) ;  }
+  75% {    left:0px; top:0px;  -webkit-transform: scale(3.0) ;  }
   100% {    left:0px; top:0px;  -webkit-transform: scale(3.0) ;  }
 
 
@@ -52,7 +55,7 @@ format for non-chrome or safari browsers</p>
 
 
 
-<input id="myGoButton" type=button value= go onclick="{
+<input id="myGoButton" type=button value= go style="font-size:30px" onclick="{
 
    if (document.getElementById('myGoButton').value =='go') {
        document.getElementById('myDiv1').className ='myAni';
@@ -63,6 +66,24 @@ format for non-chrome or safari browsers</p>
        document.getElementById('myGoButton').value= 'running'
    }
 }">
+
+
+
+
+<input  style="font-size:30px" type=text value=4.0 id="myScale">
+
+<br><input type=button value="go2" style="font-size:30px" onclick="{
+
+    document.getElementById('myDiv1').style.webkitTransform = 'scale('+document.all.myScale.value+')';
+
+}"><br>
+
+
+
+
+
+
+
 
 
 
