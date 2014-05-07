@@ -17,7 +17,7 @@
 
 .myAni {   
 -webkit-animation-name: myFirst;
--webkit-animation-duration:3s;
+-webkit-animation-duration:  infinite;
 -webkit-animation-iteration-count: 1;
 -webkit-animation-timing-function: ease;
 -webkit-animation-fill-mode: forwards;
@@ -28,11 +28,7 @@
 
 
 @-webkit-keyframes myFirst {     
-  0%   {background:red;   left:0px; top:0px;}
-  25%  {background:yellow; left:200px; top:0px; }
-  50%  {background:blue;  left:200px; top:200px; }
-  75%  {background:green;  left:0px; top:200px;}
-  100% {background:red;    left:0px; top:0px;  -webkit-transform: scale(2.1) rotate(50deg);  }
+  100% {    left:0px; top:0px;  -webkit-transform: scale(3.0) rotate(0deg);  }
 
 
 
@@ -50,6 +46,9 @@
 <p><b>Note:</b> This CSS animations example has been optimized for Phonegap and does not include the standard 
 
 format for non-chrome or safari browsers</p>
+
+
+<br><input type=button value="index.html" style="font-size:30px" onclick="location='index.html'"><br>
 
 
 
@@ -115,13 +114,10 @@ asjdfhjashdf<br>jhasdfgjahaskdf<hr>
 
 
 
-<br><input type=button value="index.html" style="font-size:30px" onclick="location='index.html'"><br>
-
 
 
 <hr>
 
 
-  -webkit-animation:myfirst 3s linear 1s infinite alternate;
 </body>
 </html>
